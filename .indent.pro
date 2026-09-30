@@ -1,0 +1,4 @@
+-linux /* linux kernel coding style */
+-nut   /* spaces instead of tabs */
+-i4    /* 4-space indentation */
+-il0   /* no space before label */
