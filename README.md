@@ -31,7 +31,7 @@ This would make the program generate a stack trace before it terminates when it 
 
 2. Build with `ninja`
 
-3. Optionally install the tool with `ninja install`
+3. Optionally install the library with `ninja install`
 
 See Meson's [Quickstart Guide](https://mesonbuild.com/Quick-guide.html).
 
