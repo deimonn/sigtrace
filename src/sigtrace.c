@@ -46,7 +46,7 @@ static void sigtrace_action(int signum, siginfo_t *siginfo, void *context)
 int sigtrace(const int *signal_list)
 {
     if (!backtrace_state)
-        backtrace_state = backtrace_create_state(NULL, true, NULL, NULL);
+        backtrace_state = backtrace_create_state(NULL, 1, NULL, NULL);
 
     struct sigaction action = {0};
 
