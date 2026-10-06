@@ -3,9 +3,7 @@
 #include <backtrace.h>
 
 #include <errno.h>
-#include <inttypes.h>
 #include <signal.h>
-#include <stdbool.h>
 
 const int sigtrace_faults[] = {
     SIGABRT, SIGBUS, SIGFPE, SIGILL, SIGQUIT, SIGSEGV, SIGSYS, SIGTRAP, SIGXCPU,
