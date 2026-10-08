@@ -55,13 +55,8 @@ int sigtrace(const int *signal_list)
 
     for (size_t i = 0; signal_list[i]; i++) {
         if (sigaction(signal_list[i], &action, NULL) != 0)
-            error = EINVAL;
+            error = -EINVAL;
     }
 
-    if (error) {
-        errno = error;
-        return -1;
-    }
-
-    return 0;
+    return error;
 }

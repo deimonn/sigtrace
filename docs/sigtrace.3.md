@@ -40,13 +40,15 @@ For most programs, **sigtrace_faults** will be enough. **sigtrace_unhandled** is
 
 # Return value
 
-Returns 0 on success. Sets **errno**(3) and returns -1 on error.
+Returns 0 on success, a negative error number on failure.
 
 # Errors
 
-+ **EINVAL**
++ **-EINVAL**
 
   One or more values in _signal_list_ either aren't a valid signal number, or represent a signal that cannot be caught. Rest of signals, if any, will still have been processed correctly.
+
+Note that all error codes are negated. To convert them to regular **errno**(3) values for comparison or passing to **strerror**(3), apply unary negation on the return value first.
 
 # Reporting bugs
 
