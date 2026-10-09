@@ -67,8 +67,3 @@ if md2manc.found()
 endif
 
 meson.add_postconf_script('compile_flags.py', 'sigtrace')
-
-run_target(
-	'check-format',
-	command: ['sh'] + files('check_format.sh') + headers + sources
-)
